@@ -14,7 +14,6 @@ export class PlacesComponent {
   selectPlace = output<Place>();
 
   onSelectPlace(place: Place) {
-    console.log('emitting', place);
     this.selectPlace.emit(place);
   }
 }

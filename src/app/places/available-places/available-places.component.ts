@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject, signal } from '@angular/core';
 
 import { Place } from '../place.model';
 import { PlacesComponent } from '../places.component';
@@ -18,6 +18,8 @@ export class AvailablePlacesComponent implements OnInit {
   error = signal('');
   private placesService = inject(PlacesService);
   private destroyRef = inject(DestroyRef);
+
+  // constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
     this.isFetching.set(true);
